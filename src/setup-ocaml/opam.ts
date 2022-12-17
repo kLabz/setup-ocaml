@@ -177,21 +177,38 @@ async function setupCygwin() {
     core.addPath(cachedPath);
   }
   const site = "https://cygwin.mirror.constant.com";
+  /*
+  Installed by depext:
+   0 install libpkgconf4            1.9.3-1
+   1 install perl-IPC-System-Simple 1.30-2
+   2 install pkgconf                1.9.3-1
+   3 install pkg-config             1.9.3-1
+   4 install mingw64-x86_64-zlib    1.2.13-1
+   5 install mingw64-x86_64-pcre    8.45-1
+  */
   const packages = [
     "curl",
+    "default",
     "diffutils",
     "git",
     "m4",
     "make",
+    "mbedtls",
+    "mbedtls-devel",
     "mercurial",
+    "mingw64-i686-gcc",
     "mingw64-i686-gcc-core",
     "mingw64-i686-gcc-g++",
+    "mingw64-i686-zlib",
+    "mingw64-x86_64-gcc",
     "mingw64-x86_64-gcc-core",
     "mingw64-x86_64-gcc-g++",
+    "mingw64-x86_64-zlib",
     "patch",
     "perl",
     "rsync",
-    "unzip",
+    "tar",
+    "unzip"
   ].join(",");
   await exec("setup-x86_64.exe", [
     "--quiet-mode",
