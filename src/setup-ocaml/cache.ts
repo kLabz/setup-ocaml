@@ -78,7 +78,7 @@ async function composeOpamCacheKeys() {
   });
   const ocamlCompiler = isSemverStyle(OCAML_COMPILER)
     ? platform === Platform.Win32
-      ? `ocaml-variants.${await resolveVersion(OCAML_COMPILER)}+mingw64c`
+      ? `ocaml-variants.${await resolveVersion(OCAML_COMPILER)}+mingw32c`
       : `ocaml-base-compiler.${await resolveVersion(OCAML_COMPILER)}`
     : OCAML_COMPILER;
   const ocamlVersion = ocamlCompiler.toLowerCase().replace(/\W/g, "_");
