@@ -79,7 +79,7 @@ export async function installer(): Promise<void> {
   if (!opamCacheHit) {
     const ocamlCompiler = isSemverStyle(OCAML_COMPILER)
       ? platform === Platform.Win32
-        ? `ocaml-variants.${await resolveVersion(OCAML_COMPILER)}+mingw64c`
+        ? `ocaml-variants.${await resolveVersion(OCAML_COMPILER)}+mingw32c`
         : `ocaml-base-compiler.${await resolveVersion(OCAML_COMPILER)}`
       : OCAML_COMPILER;
     await installOcaml(ocamlCompiler);
