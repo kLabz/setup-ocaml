@@ -119790,7 +119790,6 @@ async function setupCygwin() {
     const packages = [
         "curl",
         "diffutils",
-        "git",
         "libpcre2-devel",
         "m4",
         "make",
@@ -119802,7 +119801,6 @@ async function setupCygwin() {
         "patch",
         "perl",
         "rsync",
-        "tar",
         "unzip",
         "zlib-devel",
     ].join(",");
