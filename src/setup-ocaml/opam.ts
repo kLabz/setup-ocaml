@@ -187,6 +187,7 @@ async function setupCygwin() {
     "m4",
     "make",
     "mbedtls-devel",
+    "mingw64-i686-binutils",
     "mingw64-i686-gcc-core",
     "mingw64-i686-gcc-g++",
     "mingw64-i686-pcre2",
