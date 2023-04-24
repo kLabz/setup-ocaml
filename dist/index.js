@@ -122951,6 +122951,7 @@ async function setupCygwin() {
         "--packages",
         packages,
         "--symlink-type=sys",
+        "--allow-unsupported-windows"
     ]);
     const setupExePath = await io.which("setup-x86_64.exe");
     await io.cp(setupExePath, CYGWIN_ROOT);
