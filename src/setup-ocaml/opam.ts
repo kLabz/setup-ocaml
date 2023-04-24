@@ -162,23 +162,24 @@ async function setupOpamUnix() {
 
 async function setupCygwin() {
   const version = await getCygwinVersion();
-  const cachedPath = tc.find("cygwin", version, "x86_64");
+  const cachedPath = tc.find("cygwin", version, "x86");
   if (cachedPath === "") {
     const downloadedPath = await tc.downloadTool(
-      "https://cygwin.com/setup-x86_64.exe"
+      "https://cygwin.com/setup-x86.exe"
     );
     const cachedPath = await tc.cacheFile(
       downloadedPath,
-      "setup-x86_64.exe",
+      "setup-x86.exe",
       "cygwin",
       version,
-      "x86_64"
+      "x86"
     );
     core.addPath(cachedPath);
   } else {
     core.addPath(cachedPath);
   }
-  const site = "https://mirrors.kernel.org/sourceware/cygwin";
+  // const site = "https://mirrors.kernel.org/sourceware/cygwin";
+  const site = "http://mirrors.kernel.org/sourceware/cygwin-archive/20221123";
   const packages = [
     "curl",
     "diffutils",
@@ -186,14 +187,12 @@ async function setupCygwin() {
     "make",
     "mingw64-i686-gcc-core",
     "mingw64-i686-gcc-g++",
-    "mingw64-x86_64-gcc-core",
-    "mingw64-x86_64-gcc-g++",
     "patch",
     "perl",
     "rsync",
     "unzip",
   ].join(",");
-  await exec("setup-x86_64.exe", [
+  await exec("setup-x86.exe", [
     "--quiet-mode",
     "--root",
     CYGWIN_ROOT,
@@ -203,7 +202,7 @@ async function setupCygwin() {
     packages,
     "--symlink-type=sys",
   ]);
-  const setupExePath = await io.which("setup-x86_64.exe");
+  const setupExePath = await io.which("setup-x86.exe");
   await io.cp(setupExePath, CYGWIN_ROOT);
 }
 

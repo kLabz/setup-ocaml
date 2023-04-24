@@ -122926,7 +122926,8 @@ async function setupCygwin() {
     else {
         lib_core.addPath(cachedPath);
     }
-    const site = "https://mirrors.kernel.org/sourceware/cygwin";
+    // const site = "https://mirrors.kernel.org/sourceware/cygwin";
+    const site = "http://mirrors.kernel.org/sourceware/cygwin-archive/20221123";
     const packages = [
         "curl",
         "diffutils",

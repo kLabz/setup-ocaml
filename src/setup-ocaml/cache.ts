@@ -124,7 +124,8 @@ function composeCygwinCachePaths() {
   const cygwinRootSymlinkPath = path.posix.join("/cygdrive", "d", "cygwin");
   paths.push(cygwinRootSymlinkPath);
   const cygwinEncodedUri = encodeURIComponent(
-    "https://mirrors.kernel.org/sourceware/cygwin/"
+    // "https://mirrors.kernel.org/sourceware/cygwin/"
+    "http://mirrors.kernel.org/sourceware/cygwin-archive/20221123"
   ).toLowerCase();
   const cygwinPackageRoot = path.join(githubWorkspace, cygwinEncodedUri);
   paths.push(cygwinPackageRoot);
