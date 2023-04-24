@@ -183,14 +183,21 @@ async function setupCygwin() {
   const packages = [
     "curl",
     "diffutils",
+    "git",
+    "libpcre2-devel",
     "m4",
     "make",
+    "mbedtls-devel",
     "mingw64-i686-gcc-core",
     "mingw64-i686-gcc-g++",
+    "mingw64-i686-gcc-zlib",
+    "mingw64-i686-pcre2",
     "patch",
     "perl",
     "rsync",
+    "tar",
     "unzip",
+    "zlib-devel",
   ].join(",");
   await exec("setup-x86.exe", [
     "--quiet-mode",
