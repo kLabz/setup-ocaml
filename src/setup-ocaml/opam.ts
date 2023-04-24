@@ -196,6 +196,7 @@ async function setupCygwin() {
     "perl",
     "rsync",
     "unzip",
+    "wget",
     "zlib-devel",
   ].join(",");
   await exec("setup-x86.exe", [
