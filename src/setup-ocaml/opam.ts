@@ -293,17 +293,12 @@ export async function installOcaml(ocamlCompiler: string): Promise<void> {
     const originalPath = process.env["PATH"]!.split(path.delimiter);
     const patchedPath = [CYGWIN_ROOT_BIN, ...originalPath];
     process.env["PATH"] = patchedPath.join(path.delimiter);
-
-    await repositoryAddAll([
-      ["opam-repository-mingw", "https://github.com/ocaml-opam/opam-repository-mingw.git#sunset"]
-    ]);
-
     await exec("opam", [
       "switch",
       "create",
       ".",
       "--repositories",
-      "opam-repository-mingw",
+      "opam-repository-mingw=git+https://github.com/ocaml-opam/opam-repository-mingw.git#sunset",
       "--no-install",
       "--packages",
       ocamlCompiler,
