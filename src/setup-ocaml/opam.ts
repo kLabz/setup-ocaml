@@ -297,6 +297,8 @@ export async function installOcaml(ocamlCompiler: string): Promise<void> {
       "switch",
       "create",
       ".",
+      "--repositories",
+      "opam-repository-mingw=https://github.com/ocaml-opam/opam-repository-mingw.git#sunset",
       "--no-install",
       "--packages",
       ocamlCompiler,

@@ -74,8 +74,6 @@ export async function installer(): Promise<void> {
   }
   const opamCacheHit = await restoreOpamCache();
   await setupOpam();
-  await repositoryRemoveAll();
-  await repositoryAddAll(OPAM_REPOSITORIES);
   if (!opamCacheHit) {
     const ocamlCompiler = isSemverStyle(OCAML_COMPILER)
       ? platform === Platform.Win32
@@ -85,6 +83,8 @@ export async function installer(): Promise<void> {
     await installOcaml(ocamlCompiler);
     await saveOpamCache();
   }
+  await repositoryRemoveAll();
+  await repositoryAddAll(OPAM_REPOSITORIES);
   await restoreOpamDownloadCache();
   if (OPAM_DEPEXT) {
     await installDepext(platform);
