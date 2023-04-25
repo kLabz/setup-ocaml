@@ -192,6 +192,7 @@ async function setupCygwin() {
     "perl",
     "rsync",
     "unzip",
+    "wget",
   ].join(",");
   await exec("setup-x86_64.exe", [
     "--quiet-mode",
