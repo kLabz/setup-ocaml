@@ -22021,9 +22021,9 @@ var require_utils3 = __commonJS({
   }
 });
 
-// ../../node_modules/universal-user-agent/dist-node/index.js
+// ../../node_modules/@actions/github/node_modules/universal-user-agent/dist-node/index.js
 var require_dist_node = __commonJS({
-  "../../node_modules/universal-user-agent/dist-node/index.js"(exports2) {
+  "../../node_modules/@actions/github/node_modules/universal-user-agent/dist-node/index.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     function getUserAgent() {
@@ -22039,9 +22039,9 @@ var require_dist_node = __commonJS({
   }
 });
 
-// ../../node_modules/before-after-hook/lib/register.js
+// ../../node_modules/@actions/github/node_modules/before-after-hook/lib/register.js
 var require_register = __commonJS({
-  "../../node_modules/before-after-hook/lib/register.js"(exports2, module2) {
+  "../../node_modules/@actions/github/node_modules/before-after-hook/lib/register.js"(exports2, module2) {
     module2.exports = register;
     function register(state, name, method, options) {
       if (typeof method !== "function") {
@@ -22067,9 +22067,9 @@ var require_register = __commonJS({
   }
 });
 
-// ../../node_modules/before-after-hook/lib/add.js
+// ../../node_modules/@actions/github/node_modules/before-after-hook/lib/add.js
 var require_add = __commonJS({
-  "../../node_modules/before-after-hook/lib/add.js"(exports2, module2) {
+  "../../node_modules/@actions/github/node_modules/before-after-hook/lib/add.js"(exports2, module2) {
     module2.exports = addHook;
     function addHook(state, kind, name, hook) {
       var orig = hook;
@@ -22107,9 +22107,9 @@ var require_add = __commonJS({
   }
 });
 
-// ../../node_modules/before-after-hook/lib/remove.js
+// ../../node_modules/@actions/github/node_modules/before-after-hook/lib/remove.js
 var require_remove = __commonJS({
-  "../../node_modules/before-after-hook/lib/remove.js"(exports2, module2) {
+  "../../node_modules/@actions/github/node_modules/before-after-hook/lib/remove.js"(exports2, module2) {
     module2.exports = removeHook;
     function removeHook(state, name, method) {
       if (!state.registry[name]) {
@@ -22126,9 +22126,9 @@ var require_remove = __commonJS({
   }
 });
 
-// ../../node_modules/before-after-hook/index.js
+// ../../node_modules/@actions/github/node_modules/before-after-hook/index.js
 var require_before_after_hook = __commonJS({
-  "../../node_modules/before-after-hook/index.js"(exports2, module2) {
+  "../../node_modules/@actions/github/node_modules/before-after-hook/index.js"(exports2, module2) {
     var register = require_register();
     var addHook = require_add();
     var removeHook = require_remove();
@@ -22182,9 +22182,9 @@ var require_before_after_hook = __commonJS({
   }
 });
 
-// ../../node_modules/@octokit/endpoint/dist-node/index.js
+// ../../node_modules/@actions/github/node_modules/@octokit/endpoint/dist-node/index.js
 var require_dist_node2 = __commonJS({
-  "../../node_modules/@octokit/endpoint/dist-node/index.js"(exports2, module2) {
+  "../../node_modules/@actions/github/node_modules/@octokit/endpoint/dist-node/index.js"(exports2, module2) {
     "use strict";
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -22620,9 +22620,9 @@ var require_once = __commonJS({
   }
 });
 
-// ../../node_modules/@octokit/request-error/dist-node/index.js
+// ../../node_modules/@actions/github/node_modules/@octokit/request-error/dist-node/index.js
 var require_dist_node4 = __commonJS({
-  "../../node_modules/@octokit/request-error/dist-node/index.js"(exports2, module2) {
+  "../../node_modules/@actions/github/node_modules/@octokit/request-error/dist-node/index.js"(exports2, module2) {
     "use strict";
     var __create2 = Object.create;
     var __defProp2 = Object.defineProperty;
@@ -22712,9 +22712,9 @@ var require_dist_node4 = __commonJS({
   }
 });
 
-// ../../node_modules/@octokit/request/dist-node/index.js
+// ../../node_modules/@actions/github/node_modules/@octokit/request/dist-node/index.js
 var require_dist_node5 = __commonJS({
-  "../../node_modules/@octokit/request/dist-node/index.js"(exports2, module2) {
+  "../../node_modules/@actions/github/node_modules/@octokit/request/dist-node/index.js"(exports2, module2) {
     "use strict";
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -22922,9 +22922,9 @@ var require_dist_node5 = __commonJS({
   }
 });
 
-// ../../node_modules/@octokit/graphql/dist-node/index.js
+// ../../node_modules/@actions/github/node_modules/@octokit/graphql/dist-node/index.js
 var require_dist_node6 = __commonJS({
-  "../../node_modules/@octokit/graphql/dist-node/index.js"(exports2, module2) {
+  "../../node_modules/@actions/github/node_modules/@octokit/graphql/dist-node/index.js"(exports2, module2) {
     "use strict";
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -23059,9 +23059,9 @@ var require_dist_node6 = __commonJS({
   }
 });
 
-// ../../node_modules/@octokit/auth-token/dist-node/index.js
+// ../../node_modules/@actions/github/node_modules/@octokit/auth-token/dist-node/index.js
 var require_dist_node7 = __commonJS({
-  "../../node_modules/@octokit/auth-token/dist-node/index.js"(exports2, module2) {
+  "../../node_modules/@actions/github/node_modules/@octokit/auth-token/dist-node/index.js"(exports2, module2) {
     "use strict";
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -23130,9 +23130,9 @@ var require_dist_node7 = __commonJS({
   }
 });
 
-// ../../node_modules/@octokit/core/dist-node/index.js
+// ../../node_modules/@actions/github/node_modules/@octokit/core/dist-node/index.js
 var require_dist_node8 = __commonJS({
-  "../../node_modules/@octokit/core/dist-node/index.js"(exports2, module2) {
+  "../../node_modules/@actions/github/node_modules/@octokit/core/dist-node/index.js"(exports2, module2) {
     "use strict";
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -23289,9 +23289,9 @@ var require_dist_node8 = __commonJS({
   }
 });
 
-// ../../node_modules/@octokit/plugin-rest-endpoint-methods/dist-node/index.js
+// ../../node_modules/@actions/github/node_modules/@octokit/plugin-rest-endpoint-methods/dist-node/index.js
 var require_dist_node9 = __commonJS({
-  "../../node_modules/@octokit/plugin-rest-endpoint-methods/dist-node/index.js"(exports2, module2) {
+  "../../node_modules/@actions/github/node_modules/@octokit/plugin-rest-endpoint-methods/dist-node/index.js"(exports2, module2) {
     "use strict";
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -25445,9 +25445,9 @@ var require_dist_node9 = __commonJS({
   }
 });
 
-// ../../node_modules/@octokit/plugin-paginate-rest/dist-node/index.js
+// ../../node_modules/@actions/github/node_modules/@octokit/plugin-paginate-rest/dist-node/index.js
 var require_dist_node10 = __commonJS({
-  "../../node_modules/@octokit/plugin-paginate-rest/dist-node/index.js"(exports2, module2) {
+  "../../node_modules/@actions/github/node_modules/@octokit/plugin-paginate-rest/dist-node/index.js"(exports2, module2) {
     "use strict";
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -27070,7 +27070,7 @@ var import_packageurl_js = __toESM(require_packageurl_js(), 1);
 var a = __toESM(require_core(), 1);
 var i = __toESM(require_github(), 1);
 
-// ../../node_modules/@github/dependency-submission-toolkit/node_modules/@octokit/request-error/dist-src/index.js
+// ../../node_modules/@octokit/request-error/dist-src/index.js
 var RequestError = class extends Error {
   name;
   /**

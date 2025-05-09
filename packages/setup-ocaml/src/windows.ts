@@ -62,6 +62,7 @@ export async function setupCygwin() {
       "mingw64-i686-gcc-g++",
       "mingw64-x86_64-gcc-core",
       "mingw64-x86_64-gcc-g++",
+      "mingw64-i686-pcre2",
       "patch",
       "perl",
       "rsync",
