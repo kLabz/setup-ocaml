@@ -153511,13 +153511,6 @@ async function restoreOpamCaches() {
     return { opamCacheHit, cygwinCacheHit };
   });
 }
-async function saveCygwinCache() {
-  await core4.group("Saving Cygwin cache", async () => {
-    const { key } = await composeCygwinCacheKeys();
-    const paths = composeCygwinCachePaths();
-    await saveCache2(key, paths);
-  });
-}
 async function saveOpamCache() {
   await core4.group("Saving opam cache", async () => {
     const { key, restoreKeys } = await composeOpamCacheKeys();
@@ -153599,9 +153592,6 @@ async function installer() {
   const { opamCacheHit, cygwinCacheHit } = await restoreOpamCaches();
   if (PLATFORM === "windows") {
     await setupCygwin();
-    if (!cygwinCacheHit) {
-      await saveCygwinCache();
-    }
     await fs2.writeFile(CYGWIN_BASH_ENV, "set -o igncr");
     core6.exportVariable("BASH_ENV", CYGWIN_BASH_ENV);
     core6.addPath(CYGWIN_ROOT_BIN);

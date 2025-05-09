@@ -6,7 +6,7 @@ import { exec } from "@actions/exec";
 import {
   restoreDuneCache,
   restoreOpamCaches,
-  saveCygwinCache,
+  // saveCygwinCache,
   saveOpamCache,
 } from "./cache.js";
 import {
@@ -65,9 +65,9 @@ export async function installer() {
   const { opamCacheHit, cygwinCacheHit } = await restoreOpamCaches();
   if (PLATFORM === "windows") {
     await setupCygwin();
-    if (!cygwinCacheHit) {
-      await saveCygwinCache();
-    }
+    // if (!cygwinCacheHit) {
+    //   await saveCygwinCache();
+    // }
     await fs.writeFile(CYGWIN_BASH_ENV, "set -o igncr");
     core.exportVariable("BASH_ENV", CYGWIN_BASH_ENV);
     core.addPath(CYGWIN_ROOT_BIN);
